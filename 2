@@ -1,0 +1,136 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIMBERIO.SLAY - JASTIP Belanja Online|Belanja gampang, hasilnya pasti — no zonk, no worries.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .service {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea, button {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RIMBERIO.SLAY</h1>
+        <p>Rimberio - Your reliable shopping partner</p>
+    </header>
+
+    <section id="about">
+        <div class="service">
+            <h2>Tentang Kami</h2>
+            <p>RIMBERIO.SLAY adalah layanan JASTIP (Jasa Titip)
+			yang berkomitmen memberikan pengalaman belanja aman dan terpercaya.
+      Kami menghadirkan berbagai produk yang sulit dijangkau pelanggan, dari kebutuhan sehari-hari sampai perlengkapan jaringan.
+</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="service">
+            <h2>Layanan Kami</h2>
+            <ul>
+                <li><strong>Kepercayaan:</strong> memastikan barang 100% sesuai pesanan dan bebas penipuan.</li>
+                <li><strong>Konsolidasi:</strong> Gabungkan beberapa pesanan untuk hemat ongkir.</li>
+                <li><strong>Kemudahan:</strong> pelanggan cukup pesan, Rimberio yang belanja dan urus semuanya.</li>
+                <li><strong>Kualitas:</strong> barang didapat dari toko dan supplier terpercaya.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="service">
+            <h2>Hubungi Kami</h2>
+            <p>Siap pesan? Isi formulir di bawah untuk permintaan JASTIP!</p>
+            <form id="jastip-form">
+                <input type="text" id="name" placeholder="Nama Anda" required>
+                <input type="email" id="email" placeholder="Emai Anda" required>
+                <textarea id="message" placeholder="Deskripsikan barang yang ingin dipesan (link, ukuran, dll.)" required></textarea>
+                <button type="submit">Kirim Permintaan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 RIMBERIO.SLAY. Semua hak dilindungi. | Kontak: rimberiotkj2@gmail</p>
+    </footer>
+
+ <script>
+document.getElementById('jastip-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Nomor WA tujuan
+    const waNumber = "6289531547651";
+
+    // Pesan WhatsApp
+    const waText = 
+`Hallo, saya ingin melakukan JASTIP:
+Nama: ${name}
+Email: ${email}
+
+Pesanan:
+${message}
+
+Terima kasih`;
+
+    // Buka WhatsApp
+    window.open("https://wa.me/" + waNumber + "?text=" + encodeURIComponent(waText), "_blank");
+});
+</script>
+
+
+</body>
+</html>
